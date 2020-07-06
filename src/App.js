@@ -1,13 +1,17 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import * as nums from "./number";
 
-const welcome = "Internet";
 const number = 42;
 const adder = 2 + 3;
 const flat = false;
 const notFlat = true;
 const values = [undefined, true, false, null];
+
+// imported
+const sum = nums.count * nums.length;
+
 
 function App() {
   return (
@@ -24,7 +28,7 @@ function App() {
           Get Schwifty!
         </p>
 
-        <p>Welcome to the {welcome}</p>
+        <p>Let's count: {nums.count} * {nums.length} = {sum}</p>
         <p>
           Happy {20}
           {number} year!
