@@ -1,7 +1,7 @@
 import React from "react";
-import InputItem from "../InputItem/inputItem.js";
-import ItemList from "../ItemList/itemList.js"
-import Footer from "../Footer/footer.js"
+import InputItem from "../InputItem";
+import ItemList from "../ItemList"
+import Footer from "../Footer"
 
 
 

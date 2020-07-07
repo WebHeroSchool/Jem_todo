@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {elem} from './App';
-import {App} from './components/App/App.js'
+import {App} from './components/App/App';
 
 
 

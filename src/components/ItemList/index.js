@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "../Item/item.js"
+import Item from "../Item"
 
 
 
