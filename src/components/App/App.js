@@ -1,6 +1,7 @@
 import React from "react";
 import InputItem from "../InputItem";
-import * as list from "../ItemList"
+import {ItemList, len} from "../ItemList";
+
 import Footer from "../Footer"
 
 
@@ -8,8 +9,8 @@ import Footer from "../Footer"
 const App = () => (<div>
     <h1>to do</h1>
     <InputItem />
-    <list.ItemList />
-    <Footer count={list.toDoTasks.length} />
+    <ItemList />
+    <Footer count={len} />
 </div>)
 
 
