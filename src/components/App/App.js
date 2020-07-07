@@ -9,7 +9,8 @@ const App = () => (<div>
     <h1>to do</h1>
     <InputItem />
     <ItemList />
-    <Footer />
+    <Footer count={3} />
 </div>)
+
 
 export {App}
