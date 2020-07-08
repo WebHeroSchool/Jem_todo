@@ -6,9 +6,15 @@ import Footer from "../Footer"
 import styles from "./App.module.css";
 
 const toDoTasks = [
-    {value: "Написать приложение"},
-    {value: "Протестировать"},
-    {value: "Задеплоить приложение"}
+    {value: "Написать приложение",
+     isDone: true
+    },
+    {value: "Протестировать",
+     isDone: false
+    },
+    {value: "Задеплоить приложение",
+     isDone: false
+    }
 ];
 
 

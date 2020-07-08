@@ -5,7 +5,7 @@ import Item from "../Item"
 
 
 const ItemList = ({toDoTasks}) => (<ul>
-    {toDoTasks.map(task => (<li key={task.value}><Item itemToDo={task.value} /></li>))}
+    {toDoTasks.map(task => (<li key={task.value}><Item itemToDo={task.value} isDone={task.isDone} /></li>))}
 </ul>)
 
 
