@@ -1,8 +1,9 @@
 import React from "react";
 import InputItem from "../InputItem";
 import {ItemList} from "../ItemList";
-
 import Footer from "../Footer"
+
+import "./App.css";
 
 const toDoTasks = [
     {value: "Написать приложение"},
@@ -11,7 +12,7 @@ const toDoTasks = [
 ];
 
 
-const App = () => (<div>
+const App = () => (<div className="container">
     <h1>to do</h1>
     <InputItem />
     <ItemList toDoTasks={toDoTasks}/>
