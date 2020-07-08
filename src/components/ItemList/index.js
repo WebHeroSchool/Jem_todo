@@ -1,12 +1,12 @@
 import React from "react";
 import Item from "../Item"
 
-const toDoTasks = ["Написать приложение", "Протестировать", "Задеплоить приложение"];
-const len = toDoTasks.length;
 
-const ItemList = () => (<ul>
-    {toDoTasks.map(elem => (<li><Item itemToDo={elem} /></li>))}
+
+
+const ItemList = ({toDoTasks}) => (<ul>
+    {toDoTasks.map(task => (<li key={task.value}><Item itemToDo={task.value} /></li>))}
 </ul>)
 
 
-export {ItemList, len}
+export {ItemList}
