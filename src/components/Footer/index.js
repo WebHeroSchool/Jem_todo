@@ -2,7 +2,10 @@ import React from "react";
 
 
 const Footer = ( {count} ) => (<footer>
-    Количество дел: {count}
+    <p>
+        Количество дел: {count}
+    </p>
+
 </footer>)
 
 
