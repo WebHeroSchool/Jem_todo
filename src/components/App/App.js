@@ -1,6 +1,6 @@
 import React from "react";
 import InputItem from "../InputItem";
-import {ItemList} from "../ItemList";
+import ItemList from "../ItemList";
 import Footer from "../Footer"
 
 import styles from "./App.module.css";
@@ -19,10 +19,13 @@ const toDoTasks = [
 
 
 const App = () => (<div className={styles.container}>
-    <h1 className={styles.title}>to do</h1>
+  <div className={styles.wrapper}>
+    <h1 className={styles.title}>Дела на сегодня:</h1>
     <InputItem />
     <ItemList toDoTasks={toDoTasks}/>
     <Footer count={toDoTasks.length} />
+  </div>
+
 </div>)
 
 

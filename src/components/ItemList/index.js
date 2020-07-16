@@ -9,4 +9,4 @@ const ItemList = ({toDoTasks}) => (<ul>
 </ul>)
 
 
-export {ItemList}
+export default ItemList
