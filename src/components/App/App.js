@@ -5,28 +5,34 @@ import Footer from "../Footer"
 
 import styles from "./App.module.css";
 
-const toDoTasks = [
-    {value: "Написать приложение",
-     isDone: true
-    },
-    {value: "Протестировать",
-     isDone: false
-    },
-    {value: "Задеплоить приложение",
-     isDone: false
-    }
-];
 
+class App extends React.Component {
+  render() {
+    const toDoTasks = [
+      {value: "Написать приложение",
+        isDone: true
+      },
+      {value: "Протестировать",
+        isDone: false
+      },
+      {value: "Задеплоить приложение",
+        isDone: false
+      }
+    ];
 
-const App = () => (<div className={styles.container}>
-  <div className={styles.wrapper}>
-    <h1 className={styles.title}>Дела на сегодня:</h1>
-    <InputItem />
-    <ItemList toDoTasks={toDoTasks}/>
-    <Footer count={toDoTasks.length} />
-  </div>
+    return(
+      <div className={styles.container}>
+        <div className={styles.wrapper}>
+          <h1 className={styles.title}>Дела на сегодня:</h1>
+          <InputItem />
+          <ItemList toDoTasks={toDoTasks}/>
+          <Footer count={toDoTasks.length} />
+        </div>
 
-</div>)
+      </div>
+    )
+  }
+}
 
 
 export {App}
