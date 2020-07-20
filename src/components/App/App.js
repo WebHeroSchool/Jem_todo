@@ -7,8 +7,8 @@ import styles from "./App.module.css";
 
 
 class App extends React.Component {
-  render() {
-    const toDoTasks = [
+  state = {
+    toDoTasks: [
       {value: "Написать приложение",
         isDone: true
       },
@@ -18,15 +18,17 @@ class App extends React.Component {
       {value: "Задеплоить приложение",
         isDone: false
       }
-    ];
+    ],
+  }
 
+  render() {
     return(
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <h1 className={styles.title}>Дела на сегодня:</h1>
           <InputItem />
-          <ItemList toDoTasks={toDoTasks}/>
-          <Footer count={toDoTasks.length} />
+          <ItemList toDoTasks={this.state.toDoTasks}/>
+          <Footer count={this.state.toDoTasks.length} />
         </div>
 
       </div>
