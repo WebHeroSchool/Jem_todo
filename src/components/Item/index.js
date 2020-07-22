@@ -5,7 +5,6 @@ import Checkboxes from "./Checkbox";
 import DeleteItem from "./DeleteItem";
 
 const Item = ({itemToDo, isDone, onClickIsDone}) => {
-    debugger;
     return(
       <span className={ classnames({[styles.item]: true, [styles.done]: isDone })} >
           <Checkboxes onClickIsDone={onClickIsDone} isDone={isDone} />{itemToDo}
