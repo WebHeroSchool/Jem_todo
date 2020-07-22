@@ -21,13 +21,23 @@ class App extends React.Component {
     ],
   }
 
+  constructor(props) {
+    super(props);
+    this.onClickDone = this.onClickDone.bind(this)
+  }
+
+  onClickDone(isDone) {
+    console.log(isDone)
+}
+
+
   render() {
     return(
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <h1 className={styles.title}>Дела на сегодня:</h1>
           <InputItem />
-          <ItemList toDoTasks={this.state.toDoTasks}/>
+          <ItemList toDoTasks={this.state.toDoTasks} onClickIsDone={this.onClickDone} />
           <Footer count={this.state.toDoTasks.length} />
         </div>
 
