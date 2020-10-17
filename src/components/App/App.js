@@ -10,13 +10,16 @@ class App extends React.Component {
   state = {
     toDoTasks: [
       {value: "Написать приложение",
-        isDone: true
+        isDone: true,
+        id: 1
       },
       {value: "Протестировать",
-        isDone: false
+        isDone: false,
+        id: 2
       },
       {value: "Задеплоить приложение",
-        isDone: false
+        isDone: false,
+        id: 3
       }
     ],
   }
@@ -26,8 +29,15 @@ class App extends React.Component {
     this.onClickDone = this.onClickDone.bind(this)
   }
 
-  onClickDone(isDone) {
-    console.log(isDone)
+  onClickDone = id =>  {
+    const newItemList = this.state.toDoTasks.map(item => {
+      const newItem = {...item}
+      if (newItem.id === id) {
+        newItem.isDone = !item.isDone
+      }
+      return newItem
+    })
+    this.setState({toDoTasks: newItemList})
 }
 
 
