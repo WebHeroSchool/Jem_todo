@@ -40,6 +40,11 @@ class App extends React.Component {
     this.setState({toDoTasks: newItemList})
 }
 
+  onDelete = (delTaskId) => {
+    const newItemList = this.state.toDoTasks.filter(task => task.id !== delTaskId)
+    this.setState({toDoTasks: newItemList})
+  }
+
 
   render() {
     return(
@@ -47,7 +52,7 @@ class App extends React.Component {
         <div className={styles.wrapper}>
           <h1 className={styles.title}>Дела на сегодня:</h1>
           <InputItem />
-          <ItemList toDoTasks={this.state.toDoTasks} onClickIsDone={this.onClickDone} />
+          <ItemList toDoTasks={this.state.toDoTasks} onClickIsDone={this.onClickDone} onDelete={this.onDelete}/>
           <Footer count={this.state.toDoTasks.length} />
         </div>
 
